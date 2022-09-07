@@ -26,6 +26,10 @@ const Contact = () => {
     const [errorResponseMsg, setErrorResponseMsg] = useState("");
     const [createContactMessage, { error }] = useMutation(CREATE_CONTACT_MESSAGE);
 
+    if(error) {
+        console.log(error);
+    }
+
     const handleClick = () => {
         setOpen(true);
     };
