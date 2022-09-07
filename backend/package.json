@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --detectOpenHandles --config jest.config.js",
     "coverage": "jest --coverage --config jest.config.js",
-    "start": "node ./dist/index.ts",
+    "start": "node ./dist/index.js",
     "dev": "nodemon ./src/index.ts",
     "build": "tsc -p ."
   },
