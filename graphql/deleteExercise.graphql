@@ -1,0 +1,7 @@
+mutation {
+  deleteExercise(
+    id: 1
+  ) {
+    message
+  }
+}

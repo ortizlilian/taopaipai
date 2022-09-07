@@ -17,8 +17,8 @@ const Mutation = new GraphQLObjectType({
     name: "Mutation",
     fields: {
         createExercise: CREATE_EXERCISE,
-        // deleteExercise: DELETE_EXERCISE,
-        // updateExercise: UPDATE_EXERCISE,
+        deleteExercise: DELETE_EXERCISE,
+        updateExercise: UPDATE_EXERCISE,
         createNewsletter: CREATE_NEWSLETTER,
         createContactMessage: CREATE_CONTACT_MESSAGE
     }
