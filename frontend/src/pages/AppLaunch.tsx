@@ -23,7 +23,7 @@ const AppLaunch = () => {
 
                 <div className="applaunch-download">
                     <p>Click here to download the user manual</p>
-                    <Button variant="contained">Download</Button>
+                    <Button href="https://drive.google.com/file/d/16OYnB6T49DIQzKE-SGxwos2X0HJ5TJ8B/view" target="blank" variant="contained">Download</Button>
                 </div>
             </div>
             </>
