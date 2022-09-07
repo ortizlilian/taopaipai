@@ -1,0 +1,10 @@
+{
+  getAllExercises {
+    id
+    name
+    sets
+    reps
+    break_time
+    pose_landmark_model
+  }
+}

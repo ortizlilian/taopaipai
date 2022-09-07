@@ -1,0 +1,12 @@
+mutation {
+  updateExercise(
+    id: 1
+    name: "Bicep Curl"
+    sets: 3
+    reps: 15
+    break_time: 30
+    pose_landmark_model: ""
+  ) {
+    message
+  }
+}

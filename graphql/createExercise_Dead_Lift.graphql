@@ -1,0 +1,6 @@
+# Write your query or mutation here
+mutation {
+  createExercise (name: "Dead Lift", sets: 4, reps: 10, break_time: 30, pose_landmark_model: "[ { \"down\": 175, \"up\": 95, \"pose\": [27, 23, 11], \"live_angle\": 0}, { \"down\": 175, \"up\": 95, \"pose\": [28, 24, 12], \"live_angle\": 0} ]") {
+		name
+  }
+}
