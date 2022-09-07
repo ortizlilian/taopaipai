@@ -28,7 +28,7 @@ const pose = new Pose({
 });
 
 pose.setOptions({
-    modelComplexity: 0,
+    modelComplexity: 1,
     smoothLandmarks: true,
     enableSegmentation: true,
     smoothSegmentation: true,
@@ -36,7 +36,7 @@ pose.setOptions({
     minTrackingConfidence: 0.7,
 });
 
-const DB_DATA = {
+const _DATA = {
     break: false,
     maxReps: 5,
     maxSets: 3,
@@ -73,55 +73,55 @@ function calculate_angle(a: any, b: any, c: any) {
 
 function DetectReps(dispatch: any): void {
     if (
-        DB_DATA.countReps === DB_DATA.maxReps &&
-        DB_DATA.countSets === DB_DATA.maxSets
+        _DATA.countReps === _DATA.maxReps &&
+        _DATA.countSets === _DATA.maxSets
     ) {
-        DB_DATA.completed = true;
+        _DATA.completed = true;
         return;
     }
 
-    let a = DB_DATA.model.reduce(
+    let a = _DATA.model.reduce(
         (previousValue: any, currentValue: any) =>
         previousValue + currentValue.live_angle,
         0
     );
 
-    let b = DB_DATA.model.reduce(
+    let b = _DATA.model.reduce(
         (previousValue: any, currentValue: any) =>
         previousValue + currentValue.down,
         0
     );
 
-    let c = DB_DATA.model.reduce(
+    let c = _DATA.model.reduce(
         (previousValue: any, currentValue: any) => previousValue + currentValue.up,
         0
     );
 
     if (a > b) {
-        DB_DATA.stage = "down";
+        _DATA.stage = "down";
     }
 
-    if (a < c && DB_DATA.stage === "down") {
-        if (DB_DATA.break === true) {
-            DB_DATA.break = false;
+    if (a < c && _DATA.stage === "down") {
+        if (_DATA.break === true) {
+            _DATA.break = false;
 
-            DB_DATA.stage = "up";
-            DB_DATA.countSets += 1;
-            dispatch(setSetsCountValue(DB_DATA.countSets));
+            _DATA.stage = "up";
+            _DATA.countSets += 1;
+            dispatch(setSetsCountValue(_DATA.countSets));
             dispatch(setDefaultRepsCountValue(1));
-            DB_DATA.countReps = 0;
+            _DATA.countReps = 0;
         }
-        if (DB_DATA.countReps < DB_DATA.maxReps) {
-            DB_DATA.stage = "up";
-            DB_DATA.countReps += 1;
-            dispatch(setRepsCountValue(DB_DATA.countReps));
+        if (_DATA.countReps < _DATA.maxReps) {
+            _DATA.stage = "up";
+            _DATA.countReps += 1;
+            dispatch(setRepsCountValue(_DATA.countReps));
         }
 
         if (
-            DB_DATA.countReps === DB_DATA.maxReps &&
-            DB_DATA.countSets < DB_DATA.maxSets
+            _DATA.countReps === _DATA.maxReps &&
+            _DATA.countSets < _DATA.maxSets
         ) {
-            DB_DATA.break = true;
+            _DATA.break = true;
         }
     }
 }
@@ -139,19 +139,19 @@ const CameraBox = () => {
         if (results.poseLandmarks) {
             let landmarks = results.poseLandmarks;
 
-            if (DB_DATA.completed === true) {
+            if (_DATA.completed === true) {
                 setExerciseComplete(true);
             } else {
                 setExerciseComplete(false);
             }
 
-            if (DB_DATA.break === true && DB_DATA.completed === false) {
+            if (_DATA.break === true && _DATA.completed === false) {
                 setBreakTime(true);
             } else {
                 setBreakTime(false);
             }
 
-            DB_DATA.model.forEach((model) => {
+            _DATA.model.forEach((model) => {
                 model.live_angle = calculate_angle(
                     landmarks[model.pose[0]],
                     landmarks[model.pose[1]],
@@ -186,7 +186,7 @@ const CameraBox = () => {
 
     return (
         <div id="component-camerabox">
-            <ExerciseList exercise={DB_DATA} />
+            <ExerciseList exercise={_DATA} />
             <div className="set-break">
                 {breakTime === true && exerciseComplete === false && (
                     <>Set Break</>
@@ -208,7 +208,7 @@ const CameraBox = () => {
                     setCameraReady(true);
                 }}
             />
-            <Details exercise={DB_DATA} />
+            <Details exercise={_DATA} />
         </div>
     );
 };
