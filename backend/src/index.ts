@@ -14,11 +14,13 @@ const main = async () => {
     const db_username = process.env.DB_USERNAME || "postgres";
     const db_password = process.env.DB_PASSWORD || "example";
     const db_database = process.env.DB_NAME || "postgres";
+    const db_port = Number(process.env.DB_PORT) || 5433;
+    const db_host = process.env.DB_HOST || "db";
 
     const AppDataSource = new DataSource({
         type: "postgres",
-        host: "db",
-        port: 5433,
+        host: db_host,
+        port: db_port,
         username: db_username,
         password: db_password,
         database: db_database,
