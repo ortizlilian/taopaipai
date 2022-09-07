@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Righteous&family=Roboto+Mono&display=swap');
+
+* {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0px;
+    padding: 0px;
+}
+
+.clear {
+    clear: both;
+}
+
+.main-menu {
+    margin: 20px 0;
+}
+
+.main-menu ul {
+    list-style: none;
+}
+
+.main-menu ul li {
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.main-menu ul li a {
+    color: #666;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.main-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-logo {
+    color: black;
+    font-family: 'Righteous', cursive;
+    font-size: 25px;;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.main-social {
+    margin: 20px 0;
+    text-align: right;
+}
+
+.main-social ul {
+    list-style: none;
+}
+
+.main-social ul li {
+    float: right;
+    margin: 0 0 0 20px;
+}
+
+.facebook {
+    background: #ffffff url("/public/social-icons.png") no-repeat 0 0;
+    height: 45px;
+    width: 32px;
+}
+
+.facebook a {
+    color: transparent;
+    display: block;
+    z-index: 1;
+    padding: 18px 0px;
+    margin: 0px;
+}
+
+.instagram {
+    background: #ffffff url("/public/social-icons.png") no-repeat -58px 0;
+    height: 45px;
+    width: 32px;
+}
+
+.instagram a {
+    color: transparent;
+    display: block;
+    z-index: 1;
+    padding: 18px 0px;
+    margin: 0px;
+}
+
+.youtube {
+    background: #ffffff url("/public/social-icons.png") no-repeat -114px 0;
+    height: 40px;
+    width: 45px;
+}
+
+.youtube a {
+    color: transparent;
+    display: block;
+    z-index: 1;
+    padding: 18px 0px;
+    margin: 0px;
+}
+
+.facebook:hover, .instagram:hover, .youtube:hover {
+    margin-top: -2px;
+    padding-bottom: 2px;
+}
+
+#footer {
+    background: #ffffff url("/public/shadow-bg.png") repeat-x center -10px;
+    background-size: 80px;
+    color: #ffffff;
+    margin-top: -16px;
+    padding: 30px 0 10px 0;
+    text-align: center;
+}
+
+#footer p {
+    color: black;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 10px;
+}
+
+#footer span {
+    font-size: 12px;
+}

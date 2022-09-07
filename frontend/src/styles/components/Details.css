@@ -1,0 +1,35 @@
+#component-details {
+    /* background-color: #ffffff; */
+    border-radius: 0px;
+    color: #fff;
+    /* margin: -50% 0 0; */
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+#component-details button {
+    position: relative;
+    margin: -110% -85% 0 0;
+    z-index: 950;
+}
+
+#component-details ul {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: -15%;
+}
+
+#component-details ul li {
+    font-family: 'Lilita One', cursive;
+    font-size: 24px;
+    font-weight: 200;
+    float: left;
+    margin: 0 4%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 100%);
+}

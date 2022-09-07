@@ -1,0 +1,38 @@
+.home-heading {
+    margin-top: 30px;
+    max-width: 60%;
+    min-height: 130px;
+}
+
+.home-banner {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.home-banner span {
+    float: left;
+    padding: 14% 0 0;
+    text-align: right;
+    width: 35%;
+}
+
+.home-banner img {
+    float: right;
+    width: 60%;
+}
+
+.home-launch {
+    margin: 3% auto 3%;
+    text-align: center;
+    width: 40%;
+}
+
+.home-launch h2 {
+    margin-bottom: 20px;
+}
+
+#newsletter {
+    color:#fff;
+    min-height: 500px;
+    background: url("/public/home_2.jpeg") no-repeat center center;
+}

@@ -1,0 +1,54 @@
+#component-camerabox {
+
+}
+
+#component-camerabox video {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+}
+
+#component-camerabox .set-break {
+    position: absolute;
+    margin: 0 0 -15% auto;
+    padding: 25px 25px;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 200;
+    text-shadow: 1px 1px 5px black;
+    z-index: 900;
+    text-transform: uppercase;
+    animation: blinker 1s linear infinite;
+    font-family: 'Lilita One', cursive;
+}
+
+#component-camerabox .exercise-complete {
+  position: absolute;
+  color: lightgreen;
+  font-size: 30px;
+  font-weight: 200;
+  text-shadow: 1px 1px 5px black;
+  z-index: 900;
+  text-transform: uppercase;
+  animation: blinker 1s linear infinite;
+  font-family: 'Lilita One', cursive;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 50%;
+  height: 50%;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }

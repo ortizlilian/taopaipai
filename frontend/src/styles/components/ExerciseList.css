@@ -1,0 +1,35 @@
+#component-exerciseList {
+    background-color: rgba(255, 255, 255, 0.96);
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -400px;
+    min-height: 400px;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 60%);
+}
+
+#component-exerciseList h1 {
+    width: 40%;
+    margin: 0 5%;
+}
+
+#component-exerciseList nav {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+#component-exerciseList nav ul {
+    display: block;
+    width: 100%;
+}
+
+#component-exerciseList nav ul li {
+    display: block;
+}

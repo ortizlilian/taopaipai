@@ -1,0 +1,44 @@
+.contact-heading {
+    margin-top: 30px;
+    max-width: 100%;
+    min-height: 100px;
+    text-align: center;
+}
+
+.contact-form {
+    float: right;
+    width: 40%;
+    min-height: 750px;
+}
+
+.break-line-form {
+    margin-top: 20px;
+}
+
+#input-name {
+    width: 500px;
+}
+
+#input-email {
+    width: 500px;
+}
+
+#input-message {
+    width: 500px;
+}
+
+#input-name, #input-message, #input-email {
+    background: #fff;
+    border-color: #fff;
+    border-radius: 0px;
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border: 3px solid #000!important;
+}
+
+#input-name-label, #input-message-label, #input-email-label {
+    background-color: #000;
+    color: #fff!important;
+    padding: 2px 15px;
+}
